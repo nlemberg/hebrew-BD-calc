@@ -1,38 +1,313 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  font-size: 1.15rem;
+  background-color: #ffd3c6;
+  line-height: 1.6;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  display: flex;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-top: 4rem;
+  gap: 1.5rem;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  /* background-color: #fcdee8; */
+  background-color: #ffd3c6;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.flex-column:not(.no-gap) {
+  gap: 1rem;
+}
+
+.half {
+  width: 50vw;
+}
+
+.retro-box:not(.cake-img) {
+  padding: 2.5rem;
+  background-color: #fffffc;
+}
+
+.jst-center {
+  justify-content: center;
+}
+
+.algn-center {
+  align-items: center;
+}
+
+header {
+  height: fit-content;
+  width: 80%;
+  border: 1px solid #222;
+  box-shadow: 6px 6px 0 #222;
+  position: fixed;
+  top: 1rem;
+  z-index: 10;
+  text-align: center;
+  background-color: #ffe600;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  height: auto;
+  margin: 0 auto;
+}
+
+p {
+  margin-bottom: 0.5em;
+}
+
+h2 + p {
+  margin-top: 0.5em;
+}
+
+a {
+  height: fit-content;
+  text-decoration: none;
+  font-size: medium;
+}
+
+a:link {
+  color: mediumvioletred;
+}
+
+a:visited {
+  color: #0042f7;
+}
+
+a:focus {
+  color: mediumvioletred;
+}
+
+a:hover {
+  color: #0042f7;
+}
+
+a:active {
+  color: #0042f7;
+}
+
+ol,
+ul {
+  margin-left: 2rem;
+}
+
+.flex-column ol {
+  width: auto;
+}
+
+li {
+  height: fit-content;
+}
+
+.disclaimer {
+  font-size: small;
+}
+
+.instr {
+  font-size: large;
+  text-align: center;
+  color: mediumvioletred;
+}
+
+.abt {
+  font-size: 1.1rem;
+  overflow-y: auto;
+}
+
+.lnk {
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.img-lnk {
+  width: 40vw;
+}
+
+.retro-box,
+button,
+.inpDate {
+  border: 1px solid #222;
+  box-shadow: 6px 6px 0 #222;
+  border-radius: 40px;
+}
+
+button,
+.inpDate {
+  height: 3rem;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}
+button {
+  background-color: #f0f0f0;
+}
+
+.inpDate {
+  width: 17em;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p + .inpDate {
+  margin-top: 1.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flex-row button {
+  height: 3rem;
+  width: 10rem;
+  font-size: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+button:hover {
+  background-color: #fff6a8;
+}
+
+button:active {
+  box-shadow: 1px 1px 0 #222;
+  transform: translateX(5px) translateY(5px);
+}
+
+.btn-box {
+  height: fit-content;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cake-img {
+  max-width: 100%;
+  height: fit-content;
+  padding: 1.5em;
+  border-radius: 180px;
+  background-color: #d6fcff;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: none;
+  }
+
+  section {
+    flex-direction: column;
+    height: fit-content;
+    padding-top: 0;
+  }
+
+  .flex-row {
+    height: fit-content;
+  }
+
+  .half {
+    width: 100%;
+  }
+
+  header {
+    width: 92%;
+  }
+
+  form {
+    margin-top: 6.5em;
+    gap: 1em;
+  }
+
+  h1 {
+    font-size: x-large;
+    padding: 4px 8px 4px 8px;
+  }
+
+  h2 {
+    font-size: larger;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: large;
+  }
+
+  h4 {
+    margin-bottom: 1em;
+  }
+
+  a {
+    font-size: medium;
+  }
+
+  .disclaimer {
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .flex-row button {
+    width: 7rem;
+  }
+
+  .inpDate {
+    width: 13rem;
+  }
+
+  .retro-box:not(.cake-img) {
+    padding: 1.5rem;
+  }
+
+  .img-lnk {
+    width: 100%;
+  }
+
+  .rainbow {
+    height: 50vh;
+    gap: 0;
   }
 }

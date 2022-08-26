@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef } from "react";
+import { GlobalProvider } from "./context/GlobalState";
+import Header from "./components/Header";
+import Form from "./components/Form";
+import About from "./components/About";
+import Results from "./components/Results";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const formRef = useRef(null);
+  const aboutRef = useRef(null);
+  const resultRef = useRef(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalProvider>
+      <div className="container">
+        <Header />
+        <Form ref={formRef} aboutRef={aboutRef} resultRef={resultRef} />
+        <About ref={aboutRef} formRef={formRef} />
+        <Results ref={resultRef} formRef={formRef} />
+      </div>
+    </GlobalProvider>
   );
-}
+};
 
 export default App;
