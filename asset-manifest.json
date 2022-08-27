@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/hebrew-BD-calc/static/css/main.99bd38c1.css",
-    "main.js": "/hebrew-BD-calc/static/js/main.154f9095.js",
+    "main.js": "/hebrew-BD-calc/static/js/main.a5433927.js",
     "static/media/birthday_cake.png": "/hebrew-BD-calc/static/media/birthday_cake.b29d121aeabe0f1f7ae0.png",
     "index.html": "/hebrew-BD-calc/index.html",
     "main.99bd38c1.css.map": "/hebrew-BD-calc/static/css/main.99bd38c1.css.map",
-    "main.154f9095.js.map": "/hebrew-BD-calc/static/js/main.154f9095.js.map"
+    "main.a5433927.js.map": "/hebrew-BD-calc/static/js/main.a5433927.js.map"
   },
   "entrypoints": [
     "static/css/main.99bd38c1.css",
-    "static/js/main.154f9095.js"
+    "static/js/main.a5433927.js"
   ]
 }
