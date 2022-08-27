@@ -31,7 +31,7 @@ const Results = forwardRef(({ formRef }, ref) => {
             <p>
               The date you entered is{" "}
               <strong>
-                {new Date(date).toLocaleDateString("en-GB", {
+                {new Date(date).toLocaleDateString(undefined, {
                   weekday: "long",
                   year: "numeric",
                   month: "long",
