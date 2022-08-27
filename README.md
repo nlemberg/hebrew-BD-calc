@@ -7,6 +7,7 @@ I created this app to calculate when, if ever, the universe aligns for me.
 I invite you to find that out for yourself, [here](https://nlemberg.github.io/hebrew-BD-calc/).
 
 I developed this app using React and designed it entirely in CSS.
+For the Hebrew date conversions I used the [Hebcal.com](https://www.hebcal.com/) REST API.
 
 ### Credit where credit is due
 
