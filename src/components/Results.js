@@ -31,12 +31,7 @@ const Results = forwardRef(({ formRef }, ref) => {
             <p>
               The date you entered is{" "}
               <strong>
-                {new Date(date).toLocaleDateString(undefined, {
-                  weekday: "long",
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
+                {new Date(date).toUTCString().slice(0, 16)}
                 {", "}
                 {hebDate.afterSunset ? "after" : "before"} sunset.
               </strong>
